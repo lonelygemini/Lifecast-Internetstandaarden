@@ -1,185 +1,137 @@
-/* Reset & basis */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* {margin: 0;}
 
-html {
-  background-color: #f9f9fb;
-  font-size: 16px;
-}
+html {background-color: white;}
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  padding: 0 32px;               /* ruimte links/rechts */
-}
+header {box-sizing: border-box;
+background-color: white;
+margin: 5px auto;
+width:100%;
+position:relative;}
 
-/* Header & navigatie */
-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 16px 32px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-    /* ik had problemen met 
-  de header toen ik het sticky had gemaakt en kon het niet fixen. 
-  had opgezocht hoe. bron: https://www.w3schools.com/cssref/pr_pos_z-index.php */ 
-}
+header h1 {font-size: 30pt;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+padding-top: 20px;
+padding-bottom: 5px;}
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-  list-style-type: none;
-  gap: 24px;  /* 1.5rem → 24px */
-}
+h1 {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 25pt;
+padding: 10px;
+padding-left: 20px;
+color: #500060;}
 
-header li a {
-  text-decoration: none;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 15pt;
-  color: #4a2d7f;
-  background-color: transparent;
-  transition: color 0.3s ease;
-}
-
-header li a:hover {
-  color: #8a4fff;
-  background-color: transparent;
-}
+header li a {text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color:#500060;
+background-color: white;
+font-size: 15pt;
+transition: color 2s;}
 
 .focus {
-  color: #ffffff;
-  background-color: #8a4fff;
-  padding: 6px 12px; /* 0.4rem 0.8rem → 6px 12px */
-  border-radius: 6px;
+    color:rgb(188, 130, 239);
+    background-color:#500060;
 }
 
-/* Titels en tekst */
-h1, h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #4a2d7f;
+header li a:hover {color:rgb(188, 130, 239);
+    background-color:#500060;
+transition: 1000ms linear;}
+
+body {font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 14pt;
 }
 
-h1 {
-  font-size: 32px;           /* 2rem → 32px */
-  margin-bottom: 8px;         /* 0.5rem → 8px */
-}
+article {background-color: #7f538a;
+color: aliceblue;
+margin-top: 20px;
+margin-bottom: 20px;}
 
-h2 {
-  font-size: 22px;             /* 1.4rem → 22px */
-  margin-top: 16px;             /* 1rem → 16px */
-}
+article h1 {color:aliceblue;
+font-size: 25pt;}
 
-/* Algemene paragrafen */
-p {
-  padding: 8px 0;               /* 0.5rem → 8px */
-  margin-bottom: 16px;
-  color: #444;
-  line-height: 1.6;
-}
+article p {color: aliceblue}
 
-/* Artikelen als cards */
-article {
-  background: #fff;
-  border-radius: 10px;
-  padding: 24px;                 /* 1.5rem → 24px */
-  margin: 24px auto;             /* 1.5rem → 24px */
-  max-width: 1000px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
 
-/* Afbeeldingen */
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  display: block;
-  margin: 16px auto;             /* 1rem → 16px */
-}
+nav ul {display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    list-style-type: none;
+    text-decoration-line: none;
+    gap: 10px;}
 
-/* Profielen */
+img {width: 500px;}
+
+img  {object-position:center ;
+width: 55em;}
+
 #profiles ul {
-  list-style: none;
-  display: flex;
-  gap: 32px;                      /* 2rem → 32px */
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 32px;               /* 2rem → 32px */
+    list-style: none;       
+    padding: 0;
+    margin: 0;
+    display: flex;       
+    gap: 20px;             
+    justify-content: center; 
 }
 
 #profiles li {
-  flex: 1 1 250px;
-  max-width: 300px;
-  text-align: center;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 24px;                  /* 1.5rem → 24px */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    flex: 1;                 
+    max-width: 300px;        
+    text-align: center;      
 }
 
 #profiles img {
-  border-radius: 10px;
-  margin-bottom: 16px;
+    width: 100%;             
+    height: auto;
+    border-radius: 10px;     
 }
 
-/* Afleveringen thumbnails */
 #thumbnails ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;                       /* 1.5rem → 24px */
-  justify-content: center;
-  margin-top: 32px;                /* 2rem → 32px */
+    list-style: none;        
+    padding: 0;
+    margin: 0;
+    display: flex;         
+    flex-wrap: wrap;        
+    gap: 20px;              
+    justify-content: center; 
 }
 
 #thumbnails li {
-  flex: 1 1 300px;
-  max-width: 350px;
-  text-align: center;
-  background: #ffffff;
-  padding: 24px;                   /* 1.5rem → 24px */
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    flex: 1 1 300px;         
+    max-width: 350px;        
+    text-align: center;      
+    background: #f8f8f8;   
+    padding: 15px;
+    border-radius: 10px;
 }
 
-#thumbnails audio {
-  margin-top: 8px;                 /* 0.5rem → 8px */
-  width: 100%;
+#index {padding-bottom: 12.5em}
+
+#episodes {padding-bottom: 12.5em}
+
+li img {max-width: 18.75em;}
+
+li p {max-width: 318.75em;}
+
+p {padding: 20px;
+    box-sizing: border-box;
+    color: #500060;
 }
 
-/* Buttons & links (gecentreerd) */
 body a {
-  display: block;
-  width: fit-content;
-  margin: 30px auto;
-  padding: 12px 24px;
-  background-color: #8a4fff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 16px;
-  text-align: center;
-  transition: background-color 0.3s;
+margin: 20px;
+padding:10px;
+background-color: #500060;
+text-decoration: none;
+color:white;
+transition: color 5s;
 }
 
-body a:hover {
-  background-color: #6d33cc;
-}
+body a:hover {background-color:blueviolet;}
 
-/* Footer */
 footer {
-  background: #4a2d7f;
-  text-align: center;
-  padding: 32px;                    /* 2rem → 32px */
-  margin-top: 64px;                  /* 4rem → 64px */
-}
+    margin-top: 50px;
+    background-color: #500060;
+    height: 100px;}
 
-footer p {
-  color: #fff;
-}
+footer p { color: white;
+    padding: 20px;}
